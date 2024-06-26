@@ -9,6 +9,27 @@ soong_namespace {
 }
 
 install_symlink {
+	name: "bdwlan_bdwlan_symlink",
+	soc_specific: true,
+	installed_location: "firmware/wlan/qca_cld/bdwlan.bin",
+	symlink_target: "/vendor/etc/wifi/bdwlan.bin",
+}
+
+install_symlink {
+	name: "bdwlan_ch0_bdwlan_ch0_symlink",
+	soc_specific: true,
+	installed_location: "firmware/wlan/qca_cld/bdwlan_ch0.bin",
+	symlink_target: "/vendor/etc/wifi/bdwlan_ch0.bin",
+}
+
+install_symlink {
+	name: "bdwlan_ch1_bdwlan_ch1_symlink",
+	soc_specific: true,
+	installed_location: "firmware/wlan/qca_cld/bdwlan_ch1.bin",
+	symlink_target: "/vendor/etc/wifi/bdwlan_ch1.bin",
+}
+
+install_symlink {
 	name: "libc++_shared_snpe_libc++_shared_symlink32",
 	soc_specific: true,
 	installed_location: "lib/libc++_shared.so",
