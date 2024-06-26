@@ -622,7 +622,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/flashlmdd/proprietary/vendor/lib/libarcsoft_object_tracking.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_object_tracking.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib/libarcsoft_singlecam_portrait_lighting.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_singlecam_portrait_lighting.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib/libbwfocuspeaking.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbwfocuspeaking.so \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/libc++_shared_snpe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc++_shared_snpe.so \
+    vendor/lge/flashlmdd/proprietary/vendor/lib/libc++_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc++_shared.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamera_nn_stub.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib/libcamxfdalgov7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxfdalgov7.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib/libcamxfdalgov8.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxfdalgov8.so \
@@ -894,7 +894,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/libarcsoft_object_tracking.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_object_tracking.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/libarcsoft_singlecam_portrait_lighting.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_singlecam_portrait_lighting.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/libbwfocuspeaking.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbwfocuspeaking.so \
-    vendor/lge/flashlmdd/proprietary/vendor/lib64/libc++_shared_snpe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++_shared_snpe.so \
+    vendor/lge/flashlmdd/proprietary/vendor/lib64/libc++_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++_shared.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera_nn_stub.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/libcamxfdalgov7.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfdalgov7.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/libcamxfdalgov8.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfdalgov8.so \
