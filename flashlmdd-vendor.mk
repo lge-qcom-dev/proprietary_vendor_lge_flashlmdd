@@ -931,3 +931,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/sensors.sar.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.sar.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/vendor.lge.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.lge.hardware.sensors@1.0.so
+
+PRODUCT_PACKAGES += \
+    libc++_shared_snpe_libc++_shared_symlink32 \
+    libc++_shared_snpe_libc++_shared_symlink64

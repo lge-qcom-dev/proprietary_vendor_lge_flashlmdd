@@ -8,3 +8,17 @@ soong_namespace {
 	],
 }
 
+install_symlink {
+	name: "libc++_shared_snpe_libc++_shared_symlink32",
+	soc_specific: true,
+	installed_location: "lib/libc++_shared.so",
+	symlink_target: "/vendor/lib/libc++_shared_snpe.so",
+}
+
+install_symlink {
+	name: "libc++_shared_snpe_libc++_shared_symlink64",
+	soc_specific: true,
+	installed_location: "lib64/libc++_shared.so",
+	symlink_target: "/vendor/lib64/libc++_shared_snpe.so",
+}
+
