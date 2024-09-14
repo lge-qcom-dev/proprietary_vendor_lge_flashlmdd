@@ -5,7 +5,4638 @@
 soong_namespace {
 	imports: [
 		"vendor/lge/sm8150-common",
+		"hardware/qcom-caf/common/libqti-perfd-client",
+		"hardware/qcom-caf/sm8150",
+		"hardware/qcom-caf/wlan",
+        "vendor/qcom/opensource/commonsys/display",
+        "vendor/qcom/opensource/dataservices",
+        "vendor/qcom/opensource/display",
 	],
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.eeprom.imx351_m24c32",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.qti.eeprom.imx351_m24c32.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.imx351_m24c32.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.eeprom.imx363_m24c64m",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.qti.eeprom.imx363_m24c64m.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.imx363_m24c64m.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.eeprom.s5k3m5_m24c32",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.qti.eeprom.s5k3m5_m24c32.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.s5k3m5_m24c32.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.eeprom.sl556_m24c64m",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.qti.eeprom.sl556_m24c64m.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.sl556_m24c64m.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.eeprom.sl846_m24c64m",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.qti.eeprom.sl846_m24c64m.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.sl846_m24c64m.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.sensor.imx351",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.qti.sensor.imx351.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx351.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.sensor.imx363",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.qti.sensor.imx363.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx363.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.sensor.s5k3m5",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.qti.sensor.s5k3m5.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k3m5.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.sensor.sl556",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.qti.sensor.sl556.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.sl556.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.sensor.sl846",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.qti.sensor.sl846.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.sl846.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.camerasolution",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.node.camerasolution.so"],
+			shared_libs: ["libcamera_metadata", "libcutils", "libcom.qti.chinodeutils", "libSJVideoNR", "libAutoContrast", "libbwfocuspeaking", "libarcsoft_makeup", "libarcsoft_singlecam_portrait_lighting", "libjpeg", "libarcsoft_object_tracking", "libfilm_emulation_symphony", "libpng", "libcinemaeffect", "liblghdri", "libmorpho_wdr2", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.camerasolution.so"],
+			shared_libs: ["libcamera_metadata", "libcutils", "libcom.qti.chinodeutils", "libSJVideoNR", "libAutoContrast", "libbwfocuspeaking", "libarcsoft_makeup", "libarcsoft_singlecam_portrait_lighting", "libjpeg", "libarcsoft_object_tracking", "libfilm_emulation_symphony", "libpng", "libcinemaeffect", "liblghdri", "libmorpho_wdr2", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.dupis",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.node.dupis.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "lib.com.lge.elvis", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.dupis.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "lib.com.lge.elvis", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.duvis",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.node.duvis.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "lib.com.lge.elvis", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.duvis.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "lib.com.lge.elvis", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.elpis",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.node.elpis.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "lib.com.lge.elvis", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.elpis.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "lib.com.lge.elvis", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.elvis",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.node.elvis.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "lib.com.lge.elvis", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.elvis.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "lib.com.lge.elvis", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.hdr",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.node.hdr.so"],
+			shared_libs: ["liblghdri", "libcamera_metadata", "libcutils", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.hdr.so"],
+			shared_libs: ["liblghdri", "libcamera_metadata", "libcutils", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.lavis",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.node.lavis.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "lib.com.lge.elvis", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.lavis.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "lib.com.lge.elvis", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.multiframe",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.node.multiframe.so"],
+			shared_libs: ["libmorpho_image_stab31", "libcamera_metadata", "libcutils", "libcom.qti.chinodeutils", "libSRIyuv", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.multiframe.so"],
+			shared_libs: ["libmorpho_image_stab31", "libcamera_metadata", "libcutils", "libcom.qti.chinodeutils", "libSRIyuv", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.tofcapb",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.node.tofcapb.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "libcutils", "libarcsoft_makeup", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.tofcapb.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "libcutils", "libarcsoft_makeup", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.tofrtb",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.node.tofrtb.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "libcutils", "libarcsoft_makeup", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.tofrtb.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "libcutils", "libarcsoft_makeup", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.stats.aec",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.stats.aec.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libsync", "liblgae_main", "liblgdnnsnpe", "liblgsnpeawb", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.stats.aec.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libsync", "liblgae_main", "liblgdnnsnpe", "liblgsnpeawb", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.stats.aecwrapper",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.stats.aecwrapper.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.stats.aecwrapper.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.stats.af",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.stats.af.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.stats.af.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.stats.awb",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.lge.stats.awb.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libsync", "liblgawb_main", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.stats.awb.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libsync", "liblgawb_main", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.camx.chiiqutils",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.camx.chiiqutils.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcom.qti.chinodeutils", "libsync", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.camx.chiiqutils.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcom.qti.chinodeutils", "libsync", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.eisv2",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.eisv2.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.eisv2.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.eisv3",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.eisv3.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.eisv3.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.hvx.addconstant",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.hvx.addconstant.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.hvx.addconstant.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.hvx.binning",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.hvx.binning.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.hvx.binning.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.depth",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.depth.so"],
+			shared_libs: ["libcamera_metadata", "libQSEEComAPI", "libcom.qti.chinodeutils", "libion", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.depth.so"],
+			shared_libs: ["libcamera_metadata", "libQSEEComAPI", "libcom.qti.chinodeutils", "libion", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.dummyrtb",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.dummyrtb.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.dummyrtb.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.dummysat",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.dummysat.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.dummysat.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.eisv2",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.eisv2.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.eisv2.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.eisv3",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.eisv3.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.eisv3.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcamera_metadata", "libcom.qti.chinodeutils", "libsync", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.fcv",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.fcv.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.fcv.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.gpu",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.gpu.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.gpu.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.memcpy",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.memcpy.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.memcpy.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.remosaic",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.remosaic.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.remosaic.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.stich",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.stich.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.stich.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.node.swregistration",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.node.swregistration.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swregistration.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.aec",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.stats.aec.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.aec.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.af",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.stats.af.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.af.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.afd",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.stats.afd.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.afd.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.asd",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.stats.asd.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.asd.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.awb",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.stats.awb.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.awb.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.awbwrapper",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.stats.awbwrapper.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.awbwrapper.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.hafoverride",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.stats.hafoverride.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.hafoverride.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.pdlibsony",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.stats.pdlibsony.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.pdlibsony.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.pdlibwrapper",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qti.stats.pdlibwrapper.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qtistatic.stats.aec",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qtistatic.stats.aec.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.aec.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qtistatic.stats.af",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qtistatic.stats.af.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.af.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qtistatic.stats.awb",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qtistatic.stats.awb.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.awb.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qtistatic.stats.pdlib",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/com.qtistatic.stats.pdlib.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libdepthmapwrapper",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/libdepthmapwrapper.so"],
+			shared_libs: ["libdepthcomputation_wrapper", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/libdepthmapwrapper.so"],
+			shared_libs: ["libdepthcomputation_wrapper", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libdepthmapwrapper_secure",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/components/libdepthmapwrapper_secure.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/libdepthmapwrapper_secure.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_binning_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_binning_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_binning_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_binning_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_binning_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_binning_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_cine_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_cine_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_cine_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_hfr_120",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_hfr_120.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_hfr_120.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_hfr_240",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_hfr_240.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_hfr_240.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_hfr_60",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_hfr_60.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_hfr_60.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_hfr_90",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_hfr_90.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_hfr_90.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_night_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_night_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_night_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_out_focus",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_out_focus.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_out_focus.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_out_focus_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_out_focus_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_out_focus_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_panorama",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_panorama.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_panorama.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_sensor_hdr_auto_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_sensor_hdr_auto_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_sensor_hdr_auto_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_sensor_hdr_auto_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_sensor_hdr_auto_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_sensor_hdr_auto_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_sensor_hdr_on_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_sensor_hdr_on_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_sensor_hdr_on_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_sensor_hdr_on_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_sensor_hdr_on_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_sensor_hdr_on_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_uhfr_60",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_uhfr_60.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_uhfr_60.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx351w_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx351w_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx351w_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_binning_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_binning_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_binning_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_binning_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_binning_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_binning_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_cine_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_cine_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_cine_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_hfr_120",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_hfr_120.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_hfr_120.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_hfr_240",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_hfr_240.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_hfr_240.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_hfr_60",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_hfr_60.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_hfr_60.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_hfr_90",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_hfr_90.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_hfr_90.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_night_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_night_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_night_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_out_focus",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_out_focus.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_out_focus.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_out_focus_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_out_focus_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_out_focus_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_panorama",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_panorama.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_panorama.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_sensor_hdr_auto_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_sensor_hdr_auto_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_sensor_hdr_auto_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_sensor_hdr_auto_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_sensor_hdr_auto_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_sensor_hdr_auto_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_sensor_hdr_on_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_sensor_hdr_on_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_sensor_hdr_on_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_sensor_hdr_on_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_sensor_hdr_on_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_sensor_hdr_on_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_imx363_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_imx363_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_imx363_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_binning_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_binning_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_binning_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_binning_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_binning_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_binning_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_cine_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_cine_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_cine_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_hfr_120",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_hfr_120.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_hfr_120.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_hfr_240",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_hfr_240.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_hfr_240.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_hfr_60",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_hfr_60.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_hfr_60.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_hfr_90",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_hfr_90.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_hfr_90.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_night_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_night_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_night_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_out_focus",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_out_focus.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_out_focus.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_out_focus_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_out_focus_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_out_focus_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_panorama",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_panorama.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_panorama.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_sensor_hdr_auto_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_sensor_hdr_auto_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_sensor_hdr_auto_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_sensor_hdr_auto_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_sensor_hdr_auto_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_sensor_hdr_auto_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_sensor_hdr_on_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_sensor_hdr_on_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_sensor_hdr_on_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_sensor_hdr_on_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_sensor_hdr_on_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_sensor_hdr_on_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_aec_param_s5k3m5_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_aec_param_s5k3m5_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_aec_param_s5k3m5_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_imx351w_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_imx351w_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_imx351w_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_imx351w_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_imx351w_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_imx351w_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_imx363n2_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_imx363n2_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_imx363n2_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_imx363n2_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_imx363n2_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_imx363n2_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_imx363n_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_imx363n_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_imx363n_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_imx363n_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_imx363n_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_imx363n_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_imx363nb_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_imx363nb_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_imx363nb_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_imx363nb_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_imx363nb_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_imx363nb_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_s5k3m3w2_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_s5k3m3w2_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_s5k3m3w2_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_s5k3m3w2_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_s5k3m3w2_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_s5k3m3w2_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_s5k3m3wb_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_s5k3m3wb_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_s5k3m3wb_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_s5k3m3wb_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_s5k3m3wb_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_s5k3m3wb_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_s5k3m5t_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_s5k3m5t_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_s5k3m5t_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_s5k3m5t_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_s5k3m5t_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_s5k3m5t_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_s5k3m5tb_preview",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_s5k3m5tb_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_s5k3m5tb_preview.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblg_awb_param_s5k3m5tb_video",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/liblg_awb_param_s5k3m5tb_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/liblg_awb_param_s5k3m5tb_video.so"],
+			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "camera.msmnile",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/camera.msmnile.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcamera_metadata", "libcamxfdengine", "libcamxstatscore", "libsync", "libCmcPdaf", "libCmcPdaf_tele", "libz", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/camera.msmnile.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcamera_metadata", "libcamxfdengine", "libcamxstatscore", "libsync", "libCmcPdaf", "libCmcPdaf_tele", "libz", "libdl", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.chi.override",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/com.qti.chi.override.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libhardware", "libsync", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/com.qti.chi.override.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libhardware", "libsync", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "lib.com.lge.elvis",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/lib.com.lge.elvis.so"],
+			shared_libs: ["liblog", "libOpenCL", "libEGL", "libGLESv3", "libm", "libdl", "libc", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/lib.com.lge.elvis.so"],
+			shared_libs: ["liblog", "libOpenCL", "libEGL", "libGLESv3", "libm", "libdl", "libc", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libAutoContrast",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libAutoContrast.so"],
+			shared_libs: ["libsymphony-1.1.4", "libsymphonypower-1.1.4", "libc", "libm", "libdl", "liblog", "libOpenCL", "libGLESv3", "libEGL", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libAutoContrast.so"],
+			shared_libs: ["libsymphony-1.1.4", "libsymphonypower-1.1.4", "libc", "libm", "libdl", "liblog", "libOpenCL", "libGLESv3", "libEGL", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libCmcPdaf",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libCmcPdaf.so"],
+			shared_libs: ["liblog", "libc++", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libCmcPdaf.so"],
+			shared_libs: ["liblog", "libc++", "libdl", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libCmcPdaf_tele",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libCmcPdaf_tele.so"],
+			shared_libs: ["liblog", "libc++", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libCmcPdaf_tele.so"],
+			shared_libs: ["liblog", "libc++", "libdl", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libSJVideoNR",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libSJVideoNR.so"],
+			shared_libs: ["libc", "libm", "libdl", "liblog", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libSJVideoNR.so"],
+			shared_libs: ["libc", "libm", "libdl", "liblog", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libSNPE",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libSNPE.so"],
+			shared_libs: ["libsymphony-cpu", "libsymphonypower", "libdl", "liblog", "libc++_shared", "libm", "libstdc++_vendor", "libc", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libSNPE.so"],
+			shared_libs: ["libsymphony-cpu", "libsymphonypower", "libdl", "liblog", "libc++_shared", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libSRIyuv",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libSRIyuv.so"],
+			shared_libs: ["libc", "libm", "libdl", "liblog", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libSRIyuv.so"],
+			shared_libs: ["libc", "libm", "libdl", "liblog", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libarcsoft_depth_bokeh_img",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libarcsoft_depth_bokeh_img.so"],
+			shared_libs: ["libOpenCL", "libmpbase", "liblog", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libarcsoft_depth_bokeh_img.so"],
+			shared_libs: ["libOpenCL", "libmpbase", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libarcsoft_depthcam_portrait_lighting",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libarcsoft_depthcam_portrait_lighting.so"],
+			shared_libs: ["libmpbase", "liblog", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libarcsoft_depthcam_portrait_lighting.so"],
+			shared_libs: ["libmpbase", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libarcsoft_dualcam_refocus",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libarcsoft_dualcam_refocus.so"],
+			shared_libs: ["libarcsoft_dualcam_refocus_rear_t", "libarcsoft_dualcam_refocus_front", "libmpbase", "liblog", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libarcsoft_dualcam_refocus.so"],
+			shared_libs: ["libarcsoft_dualcam_refocus_rear_t", "libarcsoft_dualcam_refocus_front", "libmpbase", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libarcsoft_dualcam_refocus_front",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libarcsoft_dualcam_refocus_front.so"],
+			shared_libs: ["libmpbase", "libcvp", "liblog", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libarcsoft_dualcam_refocus_front.so"],
+			shared_libs: ["libmpbase", "libcvp", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libarcsoft_dualcam_refocus_rear_t",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libarcsoft_dualcam_refocus_rear_t.so"],
+			shared_libs: ["libmpbase", "libcvp", "liblog", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libarcsoft_dualcam_refocus_rear_t.so"],
+			shared_libs: ["libmpbase", "libcvp", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libarcsoft_makeup",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libarcsoft_makeup.so"],
+			shared_libs: ["libdl", "libmpbase", "liblog", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libarcsoft_makeup.so"],
+			shared_libs: ["libmpbase", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libarcsoft_object_tracking",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libarcsoft_object_tracking.so"],
+			shared_libs: ["libmpbase", "liblog", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libarcsoft_object_tracking.so"],
+			shared_libs: ["libmpbase", "liblog", "libdl", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libarcsoft_singlecam_portrait_lighting",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libarcsoft_singlecam_portrait_lighting.so"],
+			shared_libs: ["libmpbase", "liblog", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libarcsoft_singlecam_portrait_lighting.so"],
+			shared_libs: ["libmpbase", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libbwfocuspeaking",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libbwfocuspeaking.so"],
+			shared_libs: ["libc++", "libdl", "libc", "libm", "liblog", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libbwfocuspeaking.so"],
+			shared_libs: ["libc", "libm", "libdl", "liblog", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libc++_shared",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libc++_shared.so"],
+			shared_libs: ["libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libc++_shared.so"],
+			shared_libs: ["libc", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcamera_nn_stub",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libcamera_nn_stub.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcamera_nn_stub.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcamxfdalgov7",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libcamxfdalgov7.so"],
+			shared_libs: ["libc++", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcamxfdalgov7.so"],
+			shared_libs: ["libc++", "libdl", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcamxfdalgov8",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libcamxfdalgov8.so"],
+			shared_libs: ["libc++", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcamxfdalgov8.so"],
+			shared_libs: ["libc++", "libdl", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcamxfdengine",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libcamxfdengine.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libcamera_nn_stub", "libcdsprpc", "libcamxfdalgov7", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcamxfdengine.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libcamera_nn_stub", "libcdsprpc", "libcamxfdalgov7", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcamxstatscore",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libcamxstatscore.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcamxstatscore.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcamxswprocessalgo",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libcamxswprocessalgo.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcamxswprocessalgo.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcamxtintlessalgo",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libcamxtintlessalgo.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcamxtintlessalgo.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcinemaeffect",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libcinemaeffect.so"],
+			shared_libs: ["libsymphony-1.1.4", "libc", "libm", "libdl", "liblog", "libsymphonypower-1.1.4", "libOpenCL", "libGLESv3", "libEGL", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcinemaeffect.so"],
+			shared_libs: ["libsymphony-1.1.4", "libc", "libm", "libdl", "liblog", "libsymphonypower-1.1.4", "libOpenCL", "libGLESv3", "libEGL", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcom.qti.chinodeutils",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libcom.qti.chinodeutils.so"],
+			shared_libs: ["libcamera_metadata", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcom.qti.chinodeutils.so"],
+			shared_libs: ["libcamera_metadata", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libdepthcomputation_wrapper",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libdepthcomputation_wrapper.so"],
+			shared_libs: ["libcdsprpc", "liblog", "libspectre3", "libm", "libc", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdepthcomputation_wrapper.so"],
+			shared_libs: ["libcdsprpc", "liblog", "libspectre3", "libm", "libc", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libfilm_emulation",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libfilm_emulation.so"],
+			shared_libs: ["libc", "libm", "libdl", "liblog", "libGLESv3", "libEGL", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libfilm_emulation.so"],
+			shared_libs: ["libc", "libm", "libdl", "liblog", "libGLESv3", "libEGL", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libfilm_emulation_symphony",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libfilm_emulation_symphony.so"],
+			shared_libs: ["libsymphony-1.1.4", "libc", "libm", "libdl", "liblog", "libsymphonypower-1.1.4", "libOpenCL", "libGLESv3", "libEGL", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libfilm_emulation_symphony.so"],
+			shared_libs: ["libsymphony-1.1.4", "libc", "libm", "libdl", "liblog", "libsymphonypower-1.1.4", "libOpenCL", "libGLESv3", "libEGL", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblgae_main",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/liblgae_main.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libsync", "libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/liblgae_main.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libsync", "libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblgawb_main",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/liblgawb_main.so"],
+			shared_libs: ["libsync", "libcutils", "liblog", "libz", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/liblgawb_main.so"],
+			shared_libs: ["libsync", "libcutils", "liblog", "libz", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblgdnnsnpe",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/liblgdnnsnpe.so"],
+			shared_libs: ["libSNPE", "libsymphony-1.1.4", "libsymphonypower-1.1.4", "libc++_shared", "liblog", "libc", "libm", "libstdc++_vendor", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/liblgdnnsnpe.so"],
+			shared_libs: ["libSNPE", "libsymphony-1.1.4", "libsymphonypower-1.1.4", "libc++_shared", "liblog", "libc", "libm", "libstdc++_vendor", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblghdri",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/liblghdri.so"],
+			shared_libs: ["libdl", "libc", "libm", "liblog", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/liblghdri.so"],
+			shared_libs: ["libc", "libm", "libdl", "liblog", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblgsnpeawb",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/liblgsnpeawb.so"],
+			shared_libs: ["libSNPE", "libsymphony-1.1.4", "libsymphonypower-1.1.4", "libc++_shared", "liblog", "libc", "libm", "libstdc++_vendor", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/liblgsnpeawb.so"],
+			shared_libs: ["libSNPE", "libsymphony-1.1.4", "libsymphonypower-1.1.4", "libc++_shared", "liblog", "libc", "libm", "libstdc++_vendor", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liblgsnpeawb_beta",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/liblgsnpeawb_beta.so"],
+			shared_libs: ["libSNPE", "libsymphony-1.1.4", "libsymphonypower-1.1.4", "libc++_shared", "liblog", "libc", "libm", "libstdc++_vendor", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/liblgsnpeawb_beta.so"],
+			shared_libs: ["libSNPE", "libsymphony-1.1.4", "libsymphonypower-1.1.4", "libc++_shared", "liblog", "libc", "libm", "libstdc++_vendor", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libmorpho_image_stab31",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libmorpho_image_stab31.so"],
+			shared_libs: ["liblog", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libmorpho_image_stab31.so"],
+			shared_libs: ["liblog", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libmorpho_wdr2",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libmorpho_wdr2.so"],
+			shared_libs: ["libdl", "liblog", "libvulkan", "libGLESv3", "libEGL", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libmorpho_wdr2.so"],
+			shared_libs: ["liblog", "libvulkan", "libGLESv3", "libEGL", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libmpbase",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libmpbase.so"],
+			shared_libs: ["libc", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libmpbase.so"],
+			shared_libs: ["libc", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libspectre3",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libspectre3.so"],
+			shared_libs: ["libm", "libc", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libspectre3.so"],
+			shared_libs: ["libm", "libc", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsymphony-1.1.4",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsymphony-1.1.4.so"],
+			shared_libs: ["liblog", "libsymphonypower-1.1.4", "libOpenCL", "libGLESv3", "libEGL", "libadsprpc", "libm", "libdl", "libc", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsymphony-1.1.4.so"],
+			shared_libs: ["liblog", "libsymphonypower-1.1.4", "libOpenCL", "libGLESv3", "libEGL", "libadsprpc", "libm", "libdl", "libc", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsymphony-cpu",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsymphony-cpu.so"],
+			shared_libs: ["liblog", "libsymphonypower", "libc++_shared", "libm", "libdl", "libc", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsymphony-cpu.so"],
+			shared_libs: ["libsymphonypower", "libc++_shared", "libm", "liblog", "libdl", "libc", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsymphonypower-1.1.4",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsymphonypower-1.1.4.so"],
+			shared_libs: ["libm", "liblog", "libdl", "libc", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsymphonypower-1.1.4.so"],
+			shared_libs: ["libm", "liblog", "libdl", "libc", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsymphonypower",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsymphonypower.so"],
+			shared_libs: ["libm", "liblog", "libdl", "libc", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsymphonypower.so"],
+			shared_libs: ["libm", "liblog", "libdl", "libc", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "sensors.ssc",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/sensors.ssc.so"],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libsnsapi", "libssc", "libsnsdiaglog", "libutils", "libcutils", "libsns_fastRPC_util", "libsensorslog", "libhardware", "libhidlbase", "android.hardware.sensors@2.0", "android.hardware.sensors@2.0-ScopedWakelock", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.mapper@2.0", "vendor.qti.hardware.display.mapper@3.0", "vendor.qti.hardware.display.mapper@1.1", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/sensors.ssc.so"],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libsnsapi", "libssc", "libsnsdiaglog", "libutils", "libcutils", "libsns_fastRPC_util", "libsensorslog", "libhardware", "libhidlbase", "android.hardware.sensors@2.0", "android.hardware.sensors@2.0-ScopedWakelock", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.mapper@2.0", "vendor.qti.hardware.display.mapper@3.0", "vendor.qti.hardware.display.mapper@1.1", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsymphony-1.1.2",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsymphony-1.1.2.so"],
+			shared_libs: ["liblog", "libsymphonypower-1.1.2", "libOpenCL", "libGLESv3", "libEGL", "libadsprpc", "libm", "libdl", "libc", ],
+		},
+	},
+	compile_multilib: "32",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsymphonypower-1.1.2",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsymphonypower-1.1.2.so"],
+			shared_libs: ["libm", "liblog", "libdl", "libc", ],
+		},
+	},
+	compile_multilib: "32",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.capturebokeh",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.capturebokeh.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "libcutils", "libarcsoft_dualcam_refocus", "libarcsoft_dualcam_portraitlighting", "libarcsoft_makeup", "libmpbase", "libjpeg", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.node.realtimebokeh",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.node.realtimebokeh.so"],
+			shared_libs: ["libcamera_metadata", "libcom.qti.chinodeutils", "libcutils", "libarcsoft_dualcam_refocus", "libarcsoft_dualcam_portraitlighting", "libarcsoft_makeup", "libmpbase", "libarcsoft_object_tracking", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.lge.stats.af_core",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.lge.stats.af_core.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.haf",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.haf.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.qti.stats.pdlib",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.pdlib.so"],
+			shared_libs: ["libcutils", "liblog", "libsync", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libtofcapb",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/libtofcapb.so"],
+			shared_libs: ["libc", "libm", "libdl", "libz", "liblog", ],
+		},
+	},
+	compile_multilib: "64",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libtofrtb",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/camera/components/libtofrtb.so"],
+			shared_libs: ["libc", "libm", "libdl", "libz", "liblog", ],
+		},
+	},
+	compile_multilib: "64",
+	relative_install_path: "camera/components",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "fingerprint.msmnile",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/fingerprint.msmnile.so"],
+			shared_libs: ["libgf_hal", "liblog", "libhardware", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libarcsoft_dualcam_portraitlighting",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libarcsoft_dualcam_portraitlighting.so"],
+			shared_libs: ["libmpbase", "libOpenCL", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libfpsph",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libfpsph.so"],
+			shared_libs: ["libutils", "libcutils", "liblog", "libhidlbase", "vendor.lge.hardware.powerhint.rescontrol@2.0", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libgf_algo",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libgf_algo.so"],
+			shared_libs: ["libcutils", "libc", "libm", "libdl", "liblog", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libgf_hal",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libgf_hal.so"],
+			shared_libs: ["libcutils", "libutils", "libgf_algo", "libQSEEComAPI", "libion", "libfpsph", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "sensors.sar",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/sensors.sar.so"],
+			shared_libs: ["android.hardware.graphics.allocator@2.0", "android.hardware.graphics.allocator@3.0", "android.hardware.graphics.mapper@2.0", "android.hardware.graphics.mapper@2.1", "android.hardware.graphics.mapper@3.0", "android.hardware.sensors@2.0-ScopedWakelock", "android.hardware.sensors@1.0", "android.hardware.sensors@2.0", "android.hardware.sensors@2.1", "vendor.lge.hardware.sensors@1.0", "libfmq", "libbinder", "libhardware", "libhidlbase", "libutils", "liblog", "libc", "libcutils", "libc++", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.lge.hardware.sensors@1.0",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.lge.hardware.sensors@1.0.so"],
+			shared_libs: ["libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "AlacDecoderModule.so",
+	filename: "AlacDecoderModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/AlacDecoderModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "ApeDecoderModule.so",
+	filename: "ApeDecoderModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/ApeDecoderModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "AudioContextDetection.so",
+	filename: "AudioContextDetection.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/AudioContextDetection.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "AudioSphereModule.so",
+	filename: "AudioSphereModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/AudioSphereModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "CFCMModule.so",
+	filename: "CFCMModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/CFCMModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "EtsiAmrWbPlusDecModule.so",
+	filename: "EtsiAmrWbPlusDecModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/EtsiAmrWbPlusDecModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "EtsiEaacPlusEncAndCmnModule.so",
+	filename: "EtsiEaacPlusEncAndCmnModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/EtsiEaacPlusEncAndCmnModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "FlacDecoderModule.so",
+	filename: "FlacDecoderModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/FlacDecoderModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "HeaacDecoderModule.so",
+	filename: "HeaacDecoderModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/HeaacDecoderModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "LdacModule.so",
+	filename: "LdacModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/LdacModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "SAPlusCmnModule.so",
+	filename: "SAPlusCmnModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/SAPlusCmnModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "SVACmnModule.so",
+	filename: "SVACmnModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/SVACmnModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "VoiceWakeup_V2_Module.so",
+	filename: "VoiceWakeup_V2_Module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/VoiceWakeup_V2_Module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "VorbisDecoderModule.so",
+	filename: "VorbisDecoderModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/VorbisDecoderModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "WmaProDecoderModule.so",
+	filename: "WmaProDecoderModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/WmaProDecoderModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "WmaStdDecoderModule.so",
+	filename: "WmaStdDecoderModule.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/WmaStdDecoderModule.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "activity",
+	filename: "activity.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/activity.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "capi_v2_aptX_Classic",
+	filename: "capi_v2_aptX_Classic.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "capi_v2_aptX_HD",
+	filename: "capi_v2_aptX_HD.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "cellinfo_tools",
+	filename: "cellinfo_tools.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/cellinfo_tools.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "chre_drv_bt",
+	filename: "chre_drv_bt.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/chre_drv_bt.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "chre_drv_gf",
+	filename: "chre_drv_gf.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/chre_drv_gf.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "chre_drv_loc",
+	filename: "chre_drv_loc.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/chre_drv_loc.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "chre_drv_modem",
+	filename: "chre_drv_modem.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/chre_drv_modem.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "chre_drv_wifi",
+	filename: "chre_drv_wifi.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/chre_drv_wifi.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "chre_pal",
+	filename: "chre_pal.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/chre_pal.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fastrpc_shell_0",
+	filename: "fastrpc_shell_0",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fastrpc_shell_0",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "ffns_module_fv9.so",
+	filename: "ffns_module_fv9.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/ffns_module_fv9.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "ffv_module.so",
+	filename: "ffv_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/ffv_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "ffv_module_fv9.so",
+	filename: "ffv_module_fv9.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/ffv_module_fv9.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_bs_module.so",
+	filename: "fluence_bs_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_bs_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_bs_module_fv9.so",
+	filename: "fluence_bs_module_fv9.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_bs_module_fv9.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_ef_module.so",
+	filename: "fluence_ef_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_ef_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_ef_module_fv9.so",
+	filename: "fluence_ef_module_fv9.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_ef_module_fv9.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_pro_vc_module.so",
+	filename: "fluence_pro_vc_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_pro_vc_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_pro_vc_module_fv9.so",
+	filename: "fluence_pro_vc_module_fv9.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_pro_vc_module_fv9.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_pro_vr_module.so",
+	filename: "fluence_pro_vr_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_pro_vr_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_pro_vr_module_fv9.so",
+	filename: "fluence_pro_vr_module_fv9.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_pro_vr_module_fv9.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_sm_module.so",
+	filename: "fluence_sm_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_sm_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_sm_module_fv9.so",
+	filename: "fluence_sm_module_fv9.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_sm_module_fv9.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "fluence_voiceplus_module.so",
+	filename: "fluence_voiceplus_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/fluence_voiceplus_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "geofence",
+	filename: "geofence.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/geofence.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "lg_nanoapp_pa",
+	filename: "lg_nanoapp_pa.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/lg_nanoapp_pa.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "lg_nanoapp_sbd",
+	filename: "lg_nanoapp_sbd.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/lg_nanoapp_sbd.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "lg_nanoapp_su",
+	filename: "lg_nanoapp_su.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/lg_nanoapp_su.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libVC1Dec",
+	filename: "libVC1Dec.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libVC1Dec.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libVC1DecDsp_skel",
+	filename: "libVC1DecDsp_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libapps_mem_heap",
+	filename: "libapps_mem_heap.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libapps_mem_heap.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libarcsoft_dualcam_refocus_skel",
+	filename: "libarcsoft_dualcam_refocus_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libcamera_nn_skel",
+	filename: "libcamera_nn_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libcamera_nn_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libchre_slpi_skel",
+	filename: "libchre_slpi_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libchre_slpi_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libcvpdsp_skel",
+	filename: "libcvpdsp_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libcvpdsp_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libdspCV_skel",
+	filename: "libdspCV_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libdspCV_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libdsp_streamer_add_constant",
+	filename: "libdsp_streamer_add_constant.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libdsp_streamer_binning",
+	filename: "libdsp_streamer_binning.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libdsp_streamer_binning.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libdsp_streamer_skel",
+	filename: "libdsp_streamer_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libdsp_streamer_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libfastcvadsp",
+	filename: "libfastcvadsp.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libfastcvadsp.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libfastcvdsp_skel",
+	filename: "libfastcvdsp_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libfastcvdsp_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libhexagon_nn_skel",
+	filename: "libhexagon_nn_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libhexagon_nn_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libqdepth_skel",
+	filename: "libqdepth_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libqdepth_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libscveObjectSegmentation_skel",
+	filename: "libscveObjectSegmentation_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libscveT2T_skel",
+	filename: "libscveT2T_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libscveT2T_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libsns_device_mode_skel",
+	filename: "libsns_device_mode_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libsns_device_mode_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libsns_low_lat_stream_skel",
+	filename: "libsns_low_lat_stream_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libstabilitydomain_skel",
+	filename: "libstabilitydomain_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libstabilitydomain_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libsysmon_skel",
+	filename: "libsysmon_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libsysmon_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libsysmondomain_skel",
+	filename: "libsysmondomain_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libsysmondomain_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "libsysmonquery_skel",
+	filename: "libsysmonquery_skel.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/libsysmonquery_skel.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "lowi_client",
+	filename: "lowi_client.so",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/lowi_client.so",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "mm_fluence_sb_module.so",
+	filename: "mm_fluence_sb_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/mm_fluence_sb_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "mmecns_module.so",
+	filename: "mmecns_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/mmecns_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "sm_fluence_sb_module.so",
+	filename: "sm_fluence_sb_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/sm_fluence_sb_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "smecns_v2_module.so",
+	filename: "smecns_v2_module.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/smecns_v2_module.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
+}
+
+prebuilt_rfsa {
+	name: "smecns_v2_module_fv9.so",
+	filename: "smecns_v2_module_fv9.so.1",
+	owner: "lge",
+	src: "proprietary/vendor/lib/rfsa/adsp/smecns_v2_module_fv9.so.1",
+	relative_install_path: "adsp",
+	soc_specific: true,
 }
 
 install_symlink {
