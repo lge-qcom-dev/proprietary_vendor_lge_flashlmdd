@@ -461,21 +461,6 @@ PRODUCT_COPY_FILES += \
     vendor/lge/flashlmdd/proprietary/vendor/firmware/ipa_uc.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_uc.b02 \
     vendor/lge/flashlmdd/proprietary/vendor/firmware/ipa_uc.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_uc.elf \
     vendor/lge/flashlmdd/proprietary/vendor/firmware/ipa_uc.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_uc.mdt \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.sensormodule.imx351.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.imx351.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.sensormodule.imx363.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.imx363.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.sensormodule.s5k3m5.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.s5k3m5.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.sensormodule.sl556.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.sl556.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.sensormodule.sl846.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.sl846.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.tuned.default.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.default.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.tuned.imx351.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.imx351.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.tuned.imx363.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.imx363.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.tuned.s5k3m5.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.s5k3m5.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.tuned.sl556.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.sl556.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/com.qti.tuned.sl846.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.sl846.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/fdconfigpreview.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigpreview.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigpreviewlite.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigvideo.bin \
-    vendor/lge/flashlmdd/proprietary/vendor/lib/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigvideolite.bin \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/camera/com.qti.sensormodule.imx351.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.imx351.bin \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/camera/com.qti.sensormodule.imx363.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.imx363.bin \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/camera/com.qti.sensormodule.s5k3m5.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.s5k3m5.bin \
@@ -493,6 +478,10 @@ PRODUCT_COPY_FILES += \
     vendor/lge/flashlmdd/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin
 
 PRODUCT_PACKAGES += \
+    libpn553_fw \
+    sensors.ssc \
+    libpn553_fw_1D \
+    libpn553_fw_1D_64 \
     com.qti.eeprom.imx351_m24c32 \
     com.qti.eeprom.imx363_m24c64m \
     com.qti.eeprom.s5k3m5_m24c32 \
@@ -504,6 +493,7 @@ PRODUCT_PACKAGES += \
     com.qti.sensor.sl556 \
     com.qti.sensor.sl846 \
     com.lge.node.camerasolution \
+    com.lge.node.capturebokeh \
     com.lge.node.dupis \
     com.lge.node.duvis \
     com.lge.node.elpis \
@@ -511,11 +501,13 @@ PRODUCT_PACKAGES += \
     com.lge.node.hdr \
     com.lge.node.lavis \
     com.lge.node.multiframe \
+    com.lge.node.realtimebokeh \
     com.lge.node.tofcapb \
     com.lge.node.tofrtb \
     com.lge.stats.aec \
     com.lge.stats.aecwrapper \
     com.lge.stats.af \
+    com.lge.stats.af_core \
     com.lge.stats.awb \
     com.qti.camx.chiiqutils \
     com.qti.eisv2 \
@@ -539,7 +531,9 @@ PRODUCT_PACKAGES += \
     com.qti.stats.asd \
     com.qti.stats.awb \
     com.qti.stats.awbwrapper \
+    com.qti.stats.haf \
     com.qti.stats.hafoverride \
+    com.qti.stats.pdlib \
     com.qti.stats.pdlibsony \
     com.qti.stats.pdlibwrapper \
     com.qtistatic.stats.aec \
@@ -548,6 +542,8 @@ PRODUCT_PACKAGES += \
     com.qtistatic.stats.pdlib \
     libdepthmapwrapper \
     libdepthmapwrapper_secure \
+    libtofcapb \
+    libtofrtb \
     liblg_aec_param_imx351w_binning_preview \
     liblg_aec_param_imx351w_binning_video \
     liblg_aec_param_imx351w_cine_video \
@@ -618,6 +614,7 @@ PRODUCT_PACKAGES += \
     liblg_awb_param_s5k3m5tb_video \
     camera.msmnile \
     com.qti.chi.override \
+    fingerprint.msmnile \
     lib.com.lge.elvis \
     libAutoContrast \
     libCmcPdaf \
@@ -627,6 +624,7 @@ PRODUCT_PACKAGES += \
     libSRIyuv \
     libarcsoft_depth_bokeh_img \
     libarcsoft_depthcam_portrait_lighting \
+    libarcsoft_dualcam_portraitlighting \
     libarcsoft_dualcam_refocus \
     libarcsoft_dualcam_refocus_front \
     libarcsoft_dualcam_refocus_rear_t \
@@ -647,6 +645,9 @@ PRODUCT_PACKAGES += \
     libdepthcomputation_wrapper \
     libfilm_emulation \
     libfilm_emulation_symphony \
+    libfpsph \
+    libgf_algo \
+    libgf_hal \
     liblgae_main \
     liblgawb_main \
     liblgdnnsnpe \
@@ -656,29 +657,11 @@ PRODUCT_PACKAGES += \
     libmorpho_image_stab31 \
     libmorpho_wdr2 \
     libmpbase \
-    libpn553_fw \
     libspectre3 \
     libsymphony-1.1.4 \
     libsymphony-cpu \
     libsymphonypower-1.1.4 \
     libsymphonypower \
-    sensors.ssc \
-    libpn553_fw_1D \
-    libpn553_fw_1D_64 \
-    libsymphony-1.1.2 \
-    libsymphonypower-1.1.2 \
-    com.lge.node.capturebokeh \
-    com.lge.node.realtimebokeh \
-    com.lge.stats.af_core \
-    com.qti.stats.haf \
-    com.qti.stats.pdlib \
-    libtofcapb \
-    libtofrtb \
-    fingerprint.msmnile \
-    libarcsoft_dualcam_portraitlighting \
-    libfpsph \
-    libgf_algo \
-    libgf_hal \
     sensors.sar \
     vendor.lge.hardware.sensors@1.0 \
     AlacDecoderModule.so \
